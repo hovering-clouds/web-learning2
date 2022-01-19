@@ -1,0 +1,255 @@
+/*basic setting*/
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+  
+body{
+    font-size: 1.6em;
+    margin: 0px;
+    background-color: rgb(230, 230, 230);
+}
+
+main{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+/*background setting*/
+.bg{
+    margin:0px;
+    margin-top: 2.4em;
+    font-size: 120%;
+    color:white;
+    text-align: center;
+    background-size:cover;
+    background-position: bottom;
+    background-image: url("../images/mc-firework.png");
+    min-height:80vh;
+    width: 100%;
+    background-attachment: fixed;
+}
+.bg h1{
+    margin:inherit;
+    padding: 1em;
+}
+
+/*navigation setting*/
+nav.nav1{
+    background-color:rgba(100, 149, 237,0.6);
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+nav.nav1 ul{
+    margin:0px;
+    padding:0px;
+    display:flex;
+    list-style-type:none;
+    align-items: center;
+    justify-content: space-around;
+}
+nav.nav1 ul a:link{
+    display: block;
+    font-size: 1.3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    color:white;
+}
+nav.nav1 ul a:visited{
+    color:dodgerblue;
+}
+nav.nav1 ul a:focus{
+    border:solid black 1px;
+}
+nav.nav1 ul a:hover{
+    color: greenyellow;
+}
+
+/*main layout*/
+main{
+    display:grid;
+    margin-bottom: 10vh;
+    grid-template-columns:24% 48% 24%;
+    grid-gap:1%;
+    grid-template-areas:
+    "lside main-content rside";
+}
+.lside{
+    grid-area:lside;
+}
+.rside{
+    grid-area:rside;
+    margin-left: 1vw;
+}
+.main-content{
+    grid-area: main-content;
+}
+
+/*leftside*/
+.bulletin{
+    background-image:linear-gradient(45deg,rgb(52, 199, 236) 0%,50%,rgb(171, 240, 231));
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top:3vh;
+    margin-bottom: 1vh;
+    line-height: 1.5;
+    padding-top:1vh;
+    padding-bottom: 1vh;
+    border-radius: 1vh;
+    width:21vw;
+}
+.profile{
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+    width: 21vw;
+    background-image:linear-gradient(45deg,rgb(52, 199, 236) 0%,50%,rgb(171, 240, 231));
+    border-radius: 1vh;
+    text-align: center;
+    position: sticky;
+    top:5rem;
+}
+.profile img{
+    margin-top: 1vh;
+    max-width:90%;
+    object-fit: cover;
+}
+.profile p{
+    margin:0px;
+    margin-top: 1vh;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+.profile p:first-of-type{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/*rightside*/
+.calendar{
+    margin-top:3vh;
+    margin-bottom: 5vh;
+    padding-top:1vh;
+    padding-bottom: 1vh;
+    width:22vw;
+    border:dashed black 1px;
+    padding:2px;
+}
+.calendar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.calendar h2{
+    margin-top: 0px;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    border-bottom: solid black 2px;
+}
+.news{
+    margin-bottom: 3vh;
+}
+.news ul{
+    list-style-type: square;
+    font-size: 1.6rem;
+}
+.news li a:link{
+    display: flex;
+    text-decoration: none;
+    align-items:baseline;
+    justify-content: space-between;
+}
+.news li a:visited{
+    color:rebeccapurple;
+}
+.news li a:focus{
+    border:solid black 1px;
+}
+.news li a:hover{
+    color:deepskyblue;
+}
+.news li a:active{
+    color:hotpink;
+}
+.news li a span{
+    float:right;
+}
+
+/*main content*/
+.main-content{
+    font-size: 1.6rem;
+}
+.main-content h3{
+    margin:1vh 0;
+    padding-bottom: 1vh;
+    border-bottom: solid deepskyblue 2px;
+}
+.main-content article{
+    padding-top:2vh;
+    padding-bottom: 2vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    margin-bottom: 4vh;
+    background-color: snow;
+    box-shadow: 0.5vw 0.6vh 1px lightgrey;
+}
+.main-content .log p{
+    border-bottom:dotted deepskyblue 1px;
+    margin-bottom: 0px;
+    padding-bottom: 2vh;
+}
+.main-content .log .logtime{
+    text-align: right;
+    margin-top: 1vh;
+}
+.message-board{
+    margin-top: 10vh;
+    display: block;
+}
+.message-board textarea{
+    /*very important,I don't know textarea dont inherit this attribute before*/
+    box-sizing: border-box;
+    width:100%;
+    height:30vh;
+    font-size: 1.6rem;
+    object-fit: cover;
+    padding:1vh 1vw;
+}
+.message-board form input{
+    float:right;
+}
+
+/*来个广告*/
+.ad iframe{
+    width:100%;
+    min-height: 400px;
+}
+/* 占位测试
+.test{
+    height: 500vh;
+}*/
+
+/*footer setting*/
+footer{
+    border-top: solid black 2px;
+    background-color: royalblue;
+    color:white;
+    min-height:10vh;
+    font-size: 2rem;
+}
+footer h2{
+    padding-left: 2vw;
+}
+footer ul{
+    list-style-type: square;
+}
+footer li{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+footer p{
+    padding:2vh 2vw;
+    margin: 0;
+}
