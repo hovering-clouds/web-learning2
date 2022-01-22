@@ -1,0 +1,11 @@
+/*css for extended things*/
+/*date 2022/01/22*/
+.searchbox{
+    display: flex;
+    align-items: flex-end;
+
+}
+.searchbox input{
+    margin-right: 1vw;
+    display: none;
+}
