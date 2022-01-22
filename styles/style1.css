@@ -67,7 +67,9 @@ nav.nav1 ul a:focus{
 nav.nav1 ul a:hover{
     color: greenyellow;
 }
-
+.navIcon{
+    display: none;
+}
 /*main layout*/
 main{
     display:grid;
@@ -88,6 +90,35 @@ main{
     grid-area: main-content;
 }
 
+@media (max-width:425px) {
+    main{
+        grid-template-columns:0% 96% 0%;
+        grid-gap:1%;
+        grid-template-areas:
+        "lside main-content rside";
+    }
+    .bg{
+        background-image: url("../images/mc-firework-sss.jpg");
+    }
+    .lside{
+        position: fixed;
+        transition: all 0.6s ease-in-out;
+        top:5rem;
+        left:-51vw;
+        width: 50vw;
+        height:90vh;
+        background-color: rgba(100, 149, 237,0.5);
+        padding:1vh 1vw;
+    }
+    .rside{
+        display: none;
+    }
+    .navIcon{
+        display: block;
+        max-width: 9vw;
+        margin-right: 1vw;
+    }
+}
 /*leftside*/
 .bulletin{
     background-image:linear-gradient(45deg,rgb(52, 199, 236) 0%,50%,rgb(171, 240, 231));
@@ -125,6 +156,22 @@ main{
 .profile p:first-of-type{
     font-size: 2.5rem;
     font-weight: bold;
+}
+.lsideWarning{
+    display: none;
+    font-size: 1rem;
+    margin-top: 2vh;
+    padding-right: 1vw;
+}
+@media (max-width:425px) {
+    .bulletin{
+        width:48vw;
+    }
+    .profile{
+        width:48vw;
+        position: static;
+        top:0px;
+    }
 }
 
 /*rightside*/
@@ -233,6 +280,7 @@ main{
 
 /*footer setting*/
 footer{
+    position: relative;
     border-top: solid black 2px;
     background-color: royalblue;
     color:white;
@@ -252,4 +300,15 @@ footer li{
 footer p{
     padding:2vh 2vw;
     margin: 0;
+}
+.timer{
+    font-size: 1.5rem;
+    position: absolute;
+    right:1vw;
+    top:1vh;
+    text-align: center;
+    line-height: 1.5;
+}
+.cpr{
+    font-size: 1.5rem;
 }

@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="author" content="hovering-clouds">
     <meta name="description" content="hovering-clouds' personal blog">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
     <title>垂云的空间</title>
-    <meta name="viewport" content="width=device-width height=device-height">    
     <link rel="shortcut icon" href="images/hc2.png">
     <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="styles/style2.css">
 </head>
 
 <body>
@@ -22,14 +23,14 @@
     <nav class="nav1">
         <!--导航栏-->
         <ul>
+            <img class="navIcon" src="images/nav-icon.png">
             <li><a href="" title="home">主页</a></li>
             <li><a href="sites/about.html" title="about">关于</a></li>
             <li><a href="sites/articles/index.html" title="articles">动态</a></li>
             <li><a href="sites/projects.html" title="projects">项目</a></li>
             <li><a href="sites/testing.html" title="testing">测试功能</a></li>
             <li><a href="sites/friends.html" title="friends">友情链接</a></li>
-            <li></li>
-            <li><img src="images/search.svg"></li>
+            <li class="searchbox"><input type="search" value="输入搜索词..."><img src="images/search.svg"></li>
         </ul>
     </nav>
 
@@ -47,6 +48,7 @@
                 <p>垂云</p>
                 <p>Life is, for reaching for the stars!</p>
             </div>
+            <div class="lsideWarning"><p>提示：您正在使用窄屏设备访问，为了更佳的体验，建议使用电脑等宽屏设备访问此页！</p></div>
         </aside>
         
         <aside class="rside">
@@ -66,6 +68,15 @@
         </aside>
 
         <section class="main-content">
+            <div class="article" id="article3">
+                <h2>站点日志</h2>
+                <article class="log" id="log3">
+                    <h3>移动端优化</h3>
+                    <p>利用媒体查询的方式，针对屏幕宽度小于等于425px的移动设备进行了重新排版，利用导航栏的按钮隐藏了左侧边栏，删除了右侧边栏</p>
+                    <div class=logtime><time datetime="2022-01-22">2022.01.22</time></div>
+                </article>
+            </div>
+
             <div class="article" id="article2">
                 <h2>站点日志</h2>
                 <article class="log" id="log2">
@@ -109,14 +120,17 @@
     </main>
 
     <footer>
-        <h2>特别鸣谢：</h2>
-        <ul>
-            <li>oc画师：Mocota</li>
-            <li>web开发教程：MDN</li>
-            <li>梦开始的地方：NekokeCore's zone</li>
-        </ul>
-        <p>Copyright © 2022. All Rights Reserved</p>
+        <div class="thanks">
+            <h2>特别鸣谢：</h2>
+            <ul>
+                <li>oc画师：Mocota</li>
+                <li>web开发教程：MDN</li>
+                <li>梦开始的地方：NekokeCore's zone</li>
+            </ul>
+        </div>
+        <div><p class="timer"></p></div>
+        <p class="cpr">Copyright © 2022. All Rights Reserved</p>
     </footer>
 </body>
-
+<script src="scripts/script1.js"></script>
 </html>
