@@ -17,15 +17,18 @@ searchIcon.addEventListener('click',displaySearchBox);
 /*navi icon click event*/
 let navIcon = document.querySelector(".navIcon");
 let lside = document.querySelector(".lside");
+let newLeftSidePara = document.querySelector(".lsideWarning");
 navIcon.addEventListener('click',displayLside);
 lside.style.left = '-51vw';
 function displayLside()
 {
     if(lside.style.left[0]==='-'){
         lside.style.left = '0vw';
+        newLeftSidePara.style.display = 'block';
     }
     else{
-        lside.style.left = '-51vw';        
+        lside.style.left = '-51vw'; 
+        newLeftSidePara.style.display = 'none';
     }
 }
 

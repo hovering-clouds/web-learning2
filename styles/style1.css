@@ -157,7 +157,12 @@ main{
     font-size: 2.5rem;
     font-weight: bold;
 }
-
+.lsideWarning{
+    display: none;
+    font-size: 1rem;
+    margin-top: 2vh;
+    padding-right: 1vw;
+}
 @media (max-width:425px) {
     .bulletin{
         width:48vw;
