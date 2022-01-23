@@ -67,6 +67,9 @@ nav.nav1 ul a:focus{
 nav.nav1 ul a:hover{
     color: greenyellow;
 }
+.nav1 ul img{
+    cursor:help;
+}
 .navIcon{
     display: none;
 }
