@@ -23,7 +23,7 @@ canvas.style.cursor = 'grab';
 bubbleDiv.setAttribute('class','container-hc');
 bubble.setAttribute('class','textbox-hc');
 tri.setAttribute('class','triangle-hc');
-bubble.textContent = '你好，游客';
+bubble.textContent = '你好，我是电芯';
 
 //contex initialization
 ctx.fillStyle = 'rgba(255,255,255,0)';
@@ -31,22 +31,22 @@ ctx.fillRect(0,0,width,height);
 
 //load image
 let imageSitBlink = new Image();
-imageSitBlink.src = 'images/hc-sit-blink2.png';
+imageSitBlink.src = 'images/elc-blink.png';
 imageSitBlink.onload = drawBlink;
 let imageSitBoop = new Image();
-imageSitBoop.src = 'images/hc-boop-sit.png';
+imageSitBoop.src = 'images/elc-blush.png';
 
 let cnt = 0;//to get different frames in cycle
 let velocity = 3;//to control how fast the animation plays
 let framesPerCycle = 120;//to indirectly control the proporion of main act(eg.blink)
 let framenum = 6;
-let imgWidth = 156;
-let imgHeight = 168;
+let imgWidth = 141;
+let imgHeight = 141;
 
 function drawBlink() {
   let ind;
-  if (cnt % 3 === 0) {
-      let cnt2 = cnt/3;
+  if (cnt % velocity === 0) {
+      let cnt2 = cnt/velocity;
     if (cnt2 < framenum) {
       ind = cnt2;
     } else {
@@ -59,7 +59,7 @@ function drawBlink() {
       imgWidth,
       imgHeight,
       width-imgWidth+6,//canvas x-bias
-      40,//canvas y-bias
+      60,//canvas y-bias
       imgWidth,
       imgHeight
     );
@@ -76,25 +76,21 @@ cnt = 0;//to get different frames in cycle
 velocity = 3;//to control how fast the animation plays
 framesPerCycle = 120;//to indirectly control the proporion of main act(eg.blink)
 framenum = 6;
-imgWidth = 156;
-imgHeight = 168;
 }
 function initImage2(){
   cnt = 0;//to get different frames in cycle
-  velocity = 3;//to control how fast the animation plays
+  velocity = 9;//to control how fast the animation plays
   framesPerCycle = 120;
-  framenum = 17;
-  imgWidth = 159;
-  imgHeight = 174;
+  framenum = 4;
 }
 function drawBoopOnce(){
   let ind;
-  if (cnt % 3 === 0) {
-      let cnt2 = cnt/3;
+  if (cnt % velocity === 0) {
+      let cnt2 = cnt/velocity;
     if (cnt2 < framenum) {
       ind = cnt2;
     } else {
-      ind = 0;
+      ind = 3;
     }
     ctx.clearRect(0,0,width,height);
     ctx.drawImage(
@@ -104,7 +100,7 @@ function drawBoopOnce(){
       imgWidth,
       imgHeight,
       width-imgWidth+6,//canvas x-bias
-      34,//canvas y-bias(for alignment, this should be img1.ybias-img1.width+this.width)
+      60,//canvas y-bias(for alignment, this should be img1.ybias-img1.width+this.width)
       imgWidth,
       imgHeight
     );
